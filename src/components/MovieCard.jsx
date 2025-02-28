@@ -2,18 +2,15 @@ import { Link } from "react-router-dom";
 import { BsFillPersonPlusFill, BsFillStarFill, BsCalendarDate, BsVectorPen } from "react-icons/bs";
 
 
-const showCard = ({ cshow, setShow }) => {
+const showCard = ({ cshow, setShow, catetegory }) => {
   return (
     <Link
-      to={{
-        pathname: `/${cshow.media_type}/${cshow.id}`,
-        state: cshow,
-      }}
+      to={`/${cshow.media_type || catetegory}/${cshow.id}`}
       onClick={() => setShow(cshow)}
     >
       <div className="flex flex-col p-4 bg-base-100 rounded-lg">
         <img
-          src={`https://image.tmdb.org/t/p/w500/${cshow.poster_path}`}
+          src={cshow.poster_path ? `https://image.tmdb.org/t/p/w500/${cshow.poster_path}` : "https://static.vecteezy.com/system/resources/previews/011/860/693/non_2x/its-movie-time-vector.jpg"}
           alt={cshow.title}
           className="rounded-lg"
         />

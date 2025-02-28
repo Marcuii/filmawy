@@ -53,7 +53,7 @@ const Navbar = ({ setSearchResults, searchKey, setSearchKey, setCatResults }) =>
           </MenuHandler>
           <MenuList className='flex flex-col text-center gap-2 text-primary bg-base-300'>
             {moviesCategory.map((category, index) => (
-              <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2'>
+              <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2 rounded-3xl'>
                 <Link to={`/${category.value}`}>
                   {category.name}
                 </Link></MenuItem>
@@ -66,7 +66,7 @@ const Navbar = ({ setSearchResults, searchKey, setSearchKey, setCatResults }) =>
           </MenuHandler>
           <MenuList className='flex flex-col text-center gap-2 text-primary bg-base-300'>
             {seriesCategory.map((category, index) => (
-              <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2'>
+              <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2 rounded-3xl'>
                 <Link to={`/${category.value}`}>
                   {category.name}
                 </Link>
@@ -145,7 +145,7 @@ const Navbar = ({ setSearchResults, searchKey, setSearchKey, setCatResults }) =>
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <div className={`${openNav ? "flex" : "hidden"} container flex flex-col justify-between items-center gap-7 mt-5`}>
+        <div className={`${openNav ? "flex" : "hidden"} flex flex-col justify-between items-center gap-7 mt-5`}>
           <p className="text-xl">Welcome <span className='text-accent'>{localStorage.getItem('name')}</span></p>
           <Menu>
             <MenuHandler>
@@ -153,7 +153,7 @@ const Navbar = ({ setSearchResults, searchKey, setSearchKey, setCatResults }) =>
             </MenuHandler>
             <MenuList className='flex flex-col text-center gap-2 text-primary bg-base-300'>
               {moviesCategory.map((category, index) => (
-                <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2'>
+                <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2 rounded-3xl'>
                   <Link to={`/${category.value}`}>
                     {category.name}
                   </Link></MenuItem>
@@ -166,7 +166,7 @@ const Navbar = ({ setSearchResults, searchKey, setSearchKey, setCatResults }) =>
             </MenuHandler>
             <MenuList className='flex flex-col text-center gap-2 text-primary bg-base-300'>
               {seriesCategory.map((category, index) => (
-                <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2'>
+                <MenuItem key={index} onClick={() => setCatResults(category)} className='hover:bg-base-100 p-2 rounded-3xl'>
                   <Link to={`/${category.value}`}>
                     {category.name}
                   </Link>
