@@ -145,7 +145,7 @@ const Navbar = ({ setSearchResults, searchKey, setSearchKey, setCatResults }) =>
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <div className="container flex flex-col justify-between items-center gap-7 mt-5">
+        <div className={`${openNav ? "flex" : "hidden"} container flex flex-col justify-between items-center gap-7 mt-5`}>
           <p className="text-xl">Welcome <span className='text-accent'>{localStorage.getItem('name')}</span></p>
           <Menu>
             <MenuHandler>
