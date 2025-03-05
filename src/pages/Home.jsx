@@ -105,7 +105,7 @@ const Home = ({ shows, label, setShow, catetegory, sortFunc, putGenres, filter }
         <h1 className="text-3xl">{label}</h1>
         <Menu>
           <MenuHandler>
-            <Button className="p-2 bg-accent flex">
+            <Button className="p-2 bg-accent flex hover:scale-110 hover:cursor-pointer">
               <BsSliders />
             </Button>
           </MenuHandler>
@@ -125,12 +125,12 @@ const Home = ({ shows, label, setShow, catetegory, sortFunc, putGenres, filter }
       <ul className="flex text-2xl gap-2 flex-wrap justify-center items-center mb-8">
           Genres:
           {movieGenres.map((genre) => (
-            <li key={genre.id} className="text-primary flex bg-accent p-2 rounded-2xl text-lg gap-1">
-              <input type="checkbox" id={genre.id} onClick={() => putGenres(genre.id)} />
-              <label htmlFor={genre.id}>{genre.name}</label>
+            <li key={genre.id} className="text-primary flex bg-accent p-2 rounded-2xl text-lg gap-1 transition duration-300 ease-in-out hover:bg-primary hover:text-accent hover:cursor-pointer hover:scale-110">
+              <input type="checkbox" id={genre.id} onClick={() => putGenres(genre.id)} className="hover:cursor-pointer"/>
+              <label htmlFor={genre.id} className="hover:cursor-pointer">{genre.name}</label>
             </li>
           ))}
-          <Button onClick={filter} color="lightBlue" ripple="light" className="p-2 bg-base-100 flex hover:bg-base-200 hover:cursor-pointer">
+          <Button onClick={filter} color="lightBlue" ripple="light" className="p-2 bg-base-100 flex hover:bg-base-200 hover:cursor-pointer hover:rotate-[360deg] transition duration-300 ease-in-out">
             Filter
           </Button>
         </ul>

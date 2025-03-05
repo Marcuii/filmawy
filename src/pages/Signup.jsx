@@ -45,7 +45,7 @@ const Signup = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button
-        className="bg-accent text-primary-content p-2 rounded w-full max-w-md"
+        className="bg-accent text-primary-content p-2 rounded w-full max-w-md hover:cursor-pointer hover:bg-primary-content hover:text-accent transition duration-300"
         onClick={handleSignup}
       >
         Sign Up

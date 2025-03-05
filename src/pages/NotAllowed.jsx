@@ -14,10 +14,10 @@ const NotAllowed = () => {
       <h1 className='text-4xl text-primary'>Access Denied!</h1>
       <div className='flex flex-raw items-center text-primary gap-6'>
         <Link to='/login'>
-          <button className='bg-neutral text-primary-content p-2 rounded-lg'>Login</button>
+          <button className='bg-neutral text-primary-content p-2 rounded-lg transition duration-300 hover:scale-110 hover:cursor-pointer'>Login</button>
         </Link>
         <Link to='/signup'>
-          <button className='bg-accent text-primary-content p-2 rounded-lg'>Signup</button>
+          <button className='bg-accent text-primary-content p-2 rounded-lg  transition duration-300 hover:scale-110 hover:cursor-pointer'>Signup</button>
         </Link>
       </div>
 

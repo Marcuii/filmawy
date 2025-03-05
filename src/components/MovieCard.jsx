@@ -8,11 +8,11 @@ const showCard = ({ cshow, setShow, catetegory }) => {
       to={`/${cshow.media_type || catetegory}/${cshow.id}`}
       onClick={() => setShow(cshow)}
     >
-      <div className="flex flex-col p-4 bg-base-100 rounded-lg">
+      <div className="flex flex-col p-4 bg-base-100 rounded-lg group transition duration-300 hover:scale-105 hover:bg-base-200">
         <img
           src={cshow.poster_path ? `https://image.tmdb.org/t/p/w500/${cshow.poster_path}` : "https://static.vecteezy.com/system/resources/previews/011/860/693/non_2x/its-movie-time-vector.jpg"}
           alt={cshow.title}
-          className="rounded-lg"
+          className="rounded-lg transition duration-300 group-hover:rotate-7"
         />
         <div className="flex flex-row justify-between mt-2 text-md">
           <div className="flex flex-col gap-1">

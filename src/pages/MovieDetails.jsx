@@ -294,7 +294,7 @@ const MovieDetails = ({ show, catetegory, setShow }) => {
         {cast.length === 0 ? <p className='text-2xl'>No Cast Found</p> :
         <div className='flex flex-row gap-5 w-full p-1 sm:px-4 overflow-x-scroll'>
           {cast.map((actor) => (
-            <div key={actor.id} className='flex flex-col bg-accent p-2 min-w-fit rounded-2xl gap-2 items-center'>
+            <div key={actor.id} className='flex flex-col bg-accent p-2 min-w-fit rounded-2xl gap-2 items-center hover:scale-105 transition duration-300'>
               <img
                 src={actor.profile_path ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}` : "https://t3.ftcdn.net/jpg/01/65/63/94/360_F_165639425_kRh61s497pV7IOPAjwjme1btB8ICkV0L.jpg"}
                 alt={actor.name}

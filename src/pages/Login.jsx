@@ -36,7 +36,7 @@ const Login = ({setLoggedIn}) => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button
-        className="bg-neutral text-primary-content p-2 rounded w-full max-w-md"
+        className="bg-neutral text-primary-content p-2 rounded w-full max-w-md hover:cursor-pointer hover:bg-primary-content hover:text-neutral transition duration-300"
         onClick={handleLogin}
       >
         Sign In
